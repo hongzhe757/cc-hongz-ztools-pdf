@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>cc.hongz</groupId>
+		<artifactId>cc-hongz-ztools</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>cc-hongz-ztools-pdf</artifactId>
+	<name>${project.artifactId}</name>
+	<description>PDF工具类模块（iText HTML→PDF）</description>
+
+	<properties>
+		<Automatic-Module-Name>cc.hongz.ztools.pdf</Automatic-Module-Name>
+	</properties>
+
+	<dependencies>
+		<!-- ztools 核心工具类库 -->
+		<dependency>
+			<groupId>cc.hongz</groupId>
+			<artifactId>cc-hongz-ztools-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- ztools 日志门面 -->
+		<dependency>
+			<groupId>cc.hongz</groupId>
+			<artifactId>cc-hongz-ztools-log</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- iText html2pdf（HTML→PDF，AGPL 协议，optional） -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>html2pdf</artifactId>
+			<version>${html2pdf.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- iText kernel（覆盖 html2pdf 传递版本，optional） -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>kernel</artifactId>
+			<version>${itext.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- JUnit5 测试框架 -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Lombok 测试去样板 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
