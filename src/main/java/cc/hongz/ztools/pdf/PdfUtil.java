@@ -12,8 +12,17 @@ import java.io.OutputStream;
 
 /**
  * PDF 工具类，基于 iText html2pdf 提供 HTML 转 PDF 能力。
+ *
+ * @author hongz
+ * @since 1.0.0
  */
-public class PdfUtil {
+public final class PdfUtil {
+
+    /**
+     * 私有构造器，禁止实例化。
+     */
+    private PdfUtil() {
+    }
 
     /**
      * HTML 字符串转 PDF，写入输出流。

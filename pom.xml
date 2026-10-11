@@ -52,6 +52,37 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- xdocreport Word→PDF（openpdf 变体，LGPL/MPL 协议，optional） -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.poi.xwpf.converter.pdf.openpdf</artifactId>
+			<version>${xdocreport.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- POI（Word 解析，排除 lite 以配合 poi-ooxml-full，optional） -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.poi</groupId>
+					<artifactId>poi-ooxml-lite</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- POI 完整 schema（xdocreport 要求 full 而非 lite，optional） -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-full</artifactId>
+			<version>${poi.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+
 		<!-- JUnit5 测试框架 -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
