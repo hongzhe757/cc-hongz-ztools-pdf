@@ -15,7 +15,7 @@
 
 	<artifactId>cc-hongz-ztools-pdf</artifactId>
 	<name>${project.artifactId}</name>
-	<description>PDF工具类模块（iText HTML→PDF）</description>
+	<description>PDF工具类模块（HTML/Word/Office/Excel 转 PDF）</description>
 
 	<properties>
 		<Automatic-Module-Name>cc.hongz.ztools.pdf</Automatic-Module-Name>
