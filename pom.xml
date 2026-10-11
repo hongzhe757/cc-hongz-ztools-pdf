@@ -51,6 +51,14 @@
 			<scope>compile</scope>
 			<optional>true</optional>
 		</dependency>
+		<!-- iText layout（Table/Cell/Paragraph 等布局能力，Excel→PDF 使用，optional） -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>layout</artifactId>
+			<version>${itext.version}</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
 
 		<!-- xdocreport Word→PDF（openpdf 变体，LGPL/MPL 协议，optional） -->
 		<dependency>
